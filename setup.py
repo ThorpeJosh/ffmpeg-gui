@@ -5,7 +5,9 @@ from ffmpeg_gui import __version__ as version
 from ffmpeg_gui import __name__ as name
 
 requirements = []
-extra_requirements = {"dev": ["pylint>=2.0.0"]}
+extra_requirements = {"dev": ["pylint>=2.0.0",
+                              "wheel>=0.37.0",
+                              "twine>=3.4.0"]}
 
 with open('README.md', encoding='utf-8') as f:
     long_description = f.read()
