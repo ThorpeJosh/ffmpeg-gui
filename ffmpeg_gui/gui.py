@@ -57,13 +57,13 @@ class GUI(tk.Tk):
         """ Ensure FFMPEG is installed and if not display an error
         """
         try:
-            subprocess.call(['ffmpeg', '--version'])
+            subprocess.call(['ffmpeg'])
         except FileNotFoundError:
             messagebox.showerror('Error', "FFMPEG is not installed\n"
                                           "Macos: 'brew install ffmpeg'\n"
                                           "Linux: 'apt-get install ffmpeg'\n"
                                           "Windows: You're on your own")
-        self._quit()
+            self._quit()
 
     def draw_main(self):
         """ Draw the main window
