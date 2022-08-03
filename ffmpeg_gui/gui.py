@@ -61,8 +61,9 @@ class GUI(tk.Tk):
         except FileNotFoundError:
             messagebox.showerror('Error', "FFMPEG is not installed\n"
                                           "Macos: 'brew install ffmpeg'\n"
-                                          "Linux: 'apt-get install ffmpeg'\n"
-                                          "Windows: You're on your own")
+                                          "Debian/Ubuntu: 'apt-get install ffmpeg'\n"
+                                          "Arch: 'pacman -S ffmpeg'\n"
+                                          "Windows: 'choco install ffmpeg'")
             self._quit()
 
     def draw_main(self):
